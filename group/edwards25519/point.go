@@ -19,6 +19,7 @@ import (
 	"encoding/hex"
 	"errors"
 	"io"
+	"math/big"
 
 	"go.dedis.ch/kyber/v3"
 	"go.dedis.ch/kyber/v3/group/internal/marshalling"
@@ -85,6 +86,11 @@ func (P *point) Equal(P2 kyber.Point) bool {
 func (P *point) Set(P2 kyber.Point) kyber.Point {
 	P.ge = P2.(*point).ge
 	return P
+}
+
+// placeholder
+func (P *point) AffineCoords() []*big.Int {
+	return nil
 }
 
 // Set point to be equal to P2.

@@ -2,6 +2,7 @@ package kyber
 
 import (
 	"crypto/cipher"
+	"math/big"
 )
 
 // Scalar represents a scalar value by which
@@ -110,6 +111,8 @@ type Point interface {
 	// Multiply point p by the scalar s.
 	// If p == nil, multiply with the standard base point Base().
 	Mul(s Scalar, p Point) Point
+
+	AffineCoords() []*big.Int
 }
 
 // AllowsVarTime allows callers to determine if a given kyber.Scalar

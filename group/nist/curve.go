@@ -121,6 +121,11 @@ func (p *curvePoint) Embed(data []byte, rand cipher.Stream) kyber.Point {
 	}
 }
 
+// placeholder
+func (p *curvePoint) AffineCoords() []*big.Int {
+	return nil
+}
+
 // Extract embedded data from a curve point
 func (p *curvePoint) Data() ([]byte, error) {
 	b := p.x.Bytes()

@@ -62,6 +62,11 @@ func (P *extPoint) UnmarshalFrom(r io.Reader) (int, error) {
 	return marshalling.PointUnmarshalFrom(P, r)
 }
 
+// placeholder
+func (P *extPoint) AffineCoords() []*big.Int {
+	return nil
+}
+
 // Equality test for two Points on the same curve.
 // We can avoid inversions here because:
 //

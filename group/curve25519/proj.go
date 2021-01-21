@@ -78,6 +78,11 @@ func (P *projPoint) Set(CP2 kyber.Point) kyber.Point {
 	return P
 }
 
+// placeholder
+func (P *projPoint) AffineCoords() []*big.Int {
+	return nil
+}
+
 func (P *projPoint) Clone() kyber.Point {
 	P2 := projPoint{}
 	P2.c = P.c

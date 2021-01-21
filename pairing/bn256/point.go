@@ -61,6 +61,23 @@ func (p *pointG1) Clone() kyber.Point {
 	return q
 }
 
+func (p *pointG1) AffineCoords() []*big.Int {
+	p = p.Clone().(*pointG1)
+
+	pgtemp := *p.g
+	pgtemp.MakeAffine()
+
+	xi := new(big.Int)
+	xWords := []big.Word{big.Word(pgtemp.x[0]), big.Word(pgtemp.x[1]), big.Word(pgtemp.x[2]), big.Word(pgtemp.x[3])}
+	xi.SetBits(xWords)
+
+	yi := new(big.Int)
+	yWords := []big.Word{big.Word(pgtemp.y[0]), big.Word(pgtemp.y[1]), big.Word(pgtemp.y[2]), big.Word(pgtemp.y[3])}
+	yi.SetBits(yWords)
+
+	return []*big.Int{xi, yi}
+}
+
 func (p *pointG1) EmbedLen() int {
 	panic("bn256.G1: unsupported operation")
 }
@@ -276,6 +293,31 @@ func (p *pointG2) Null() kyber.Point {
 func (p *pointG2) Base() kyber.Point {
 	p.g.Set(twistGen)
 	return p
+}
+
+func (p *pointG2) AffineCoords() []*big.Int {
+	p = p.Clone().(*pointG2)
+
+	pgtemp := *p.g
+	pgtemp.MakeAffine()
+
+	xxi := new(big.Int)
+	xxWords := []big.Word{big.Word(pgtemp.x.x[0]), big.Word(pgtemp.x.x[1]), big.Word(pgtemp.x.x[2]), big.Word(pgtemp.x.x[3])}
+	xxi.SetBits(xxWords)
+
+	xyi := new(big.Int)
+	xyWords := []big.Word{big.Word(pgtemp.x.y[0]), big.Word(pgtemp.x.y[1]), big.Word(pgtemp.x.y[2]), big.Word(pgtemp.x.y[3])}
+	xyi.SetBits(xyWords)
+
+	yxi := new(big.Int)
+	yxWords := []big.Word{big.Word(pgtemp.y.x[0]), big.Word(pgtemp.y.x[1]), big.Word(pgtemp.y.x[2]), big.Word(pgtemp.y.x[3])}
+	yxi.SetBits(yxWords)
+
+	yyi := new(big.Int)
+	yyWords := []big.Word{big.Word(pgtemp.y.y[0]), big.Word(pgtemp.y.y[1]), big.Word(pgtemp.y.y[2]), big.Word(pgtemp.y.y[3])}
+	yyi.SetBits(yyWords)
+
+	return []*big.Int{xxi, xyi, yxi, yyi}
 }
 
 func (p *pointG2) Pick(rand cipher.Stream) kyber.Point {
@@ -644,4 +686,9 @@ func (p *pointGT) Pair(p1, p2 kyber.Point) kyber.Point {
 	b := p2.(*pointG2).g
 	p.g.Set(optimalAte(b, a))
 	return p
+}
+
+// placeholder
+func (p *pointGT) AffineCoords() []*big.Int {
+	return nil
 }

@@ -52,6 +52,11 @@ func (p *residuePoint) Set(p2 kyber.Point) kyber.Point {
 	return p
 }
 
+// placeholder
+func (p *residuePoint) AffineCoords() []*big.Int {
+	return nil
+}
+
 func (p *residuePoint) Clone() kyber.Point {
 	return &residuePoint{g: p.g, Int: p.Int}
 }
