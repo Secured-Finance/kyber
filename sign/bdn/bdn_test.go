@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/Secured-Finance/kyber"
+	"github.com/Secured-Finance/kyber/pairing"
+	"github.com/Secured-Finance/kyber/pairing/bn256"
+	"github.com/Secured-Finance/kyber/sign"
+	"github.com/Secured-Finance/kyber/sign/bls"
+	"github.com/Secured-Finance/kyber/util/random"
 	"github.com/stretchr/testify/require"
-	"go.dedis.ch/kyber/v3"
-	"go.dedis.ch/kyber/v3/pairing"
-	"go.dedis.ch/kyber/v3/pairing/bn256"
-	"go.dedis.ch/kyber/v3/sign"
-	"go.dedis.ch/kyber/v3/sign/bls"
-	"go.dedis.ch/kyber/v3/util/random"
 )
 
 var suite = pairing.NewSuiteBn256()

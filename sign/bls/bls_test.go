@@ -4,10 +4,10 @@ import (
 	"crypto/rand"
 	"testing"
 
+	"github.com/Secured-Finance/kyber"
+	"github.com/Secured-Finance/kyber/pairing/bn256"
+	"github.com/Secured-Finance/kyber/util/random"
 	"github.com/stretchr/testify/require"
-	"go.dedis.ch/kyber/v3"
-	"go.dedis.ch/kyber/v3/pairing/bn256"
-	"go.dedis.ch/kyber/v3/util/random"
 )
 
 func TestBLS(t *testing.T) {

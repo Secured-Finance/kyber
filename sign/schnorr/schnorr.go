@@ -17,7 +17,7 @@ import (
 	"errors"
 	"fmt"
 
-	"go.dedis.ch/kyber/v3"
+	"github.com/Secured-Finance/kyber"
 )
 
 // Suite represents the set of functionalities needed by the package schnorr.

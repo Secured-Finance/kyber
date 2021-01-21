@@ -21,8 +21,8 @@ import (
 	"io"
 	"math/big"
 
-	"go.dedis.ch/kyber/v3"
-	"go.dedis.ch/kyber/v3/group/internal/marshalling"
+	"github.com/Secured-Finance/kyber"
+	"github.com/Secured-Finance/kyber/group/internal/marshalling"
 )
 
 var marshalPointID = [8]byte{'e', 'd', '.', 'p', 'o', 'i', 'n', 't'}

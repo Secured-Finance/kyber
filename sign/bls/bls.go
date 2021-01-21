@@ -17,8 +17,8 @@ import (
 	"errors"
 	"fmt"
 
-	"go.dedis.ch/kyber/v3"
-	"go.dedis.ch/kyber/v3/pairing"
+	"github.com/Secured-Finance/kyber"
+	"github.com/Secured-Finance/kyber/pairing"
 )
 
 type hashablePoint interface {

@@ -1,8 +1,8 @@
 package test
 
 import (
-	"go.dedis.ch/kyber/v3"
-	"go.dedis.ch/kyber/v3/util/random"
+	"github.com/Secured-Finance/kyber"
+	"github.com/Secured-Finance/kyber/util/random"
 )
 
 // GroupBench is a generic benchmark suite for kyber.groups.

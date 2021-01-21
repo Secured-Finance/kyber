@@ -8,8 +8,8 @@ import (
 	"errors"
 	"fmt"
 
-	"go.dedis.ch/kyber/v3"
-	"go.dedis.ch/kyber/v3/group/edwards25519"
+	"github.com/Secured-Finance/kyber"
+	"github.com/Secured-Finance/kyber/group/edwards25519"
 )
 
 var group = new(edwards25519.Curve)

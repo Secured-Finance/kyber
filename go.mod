@@ -1,4 +1,4 @@
-module go.dedis.ch/kyber/v3
+module github.com/Secured-Finance/kyber
 
 require (
 	github.com/stretchr/testify v1.3.0

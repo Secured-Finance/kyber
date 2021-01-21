@@ -7,11 +7,11 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/Secured-Finance/kyber"
+	"github.com/Secured-Finance/kyber/group/edwards25519"
+	"github.com/Secured-Finance/kyber/share"
+	vss "github.com/Secured-Finance/kyber/share/vss/pedersen"
 	"github.com/stretchr/testify/require"
-	"go.dedis.ch/kyber/v3"
-	"go.dedis.ch/kyber/v3/group/edwards25519"
-	"go.dedis.ch/kyber/v3/share"
-	vss "go.dedis.ch/kyber/v3/share/vss/pedersen"
 )
 
 // Note: if you are looking for a complete scenario that shows DKG in action

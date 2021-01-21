@@ -7,9 +7,9 @@ import (
 	"io"
 	"math/big"
 
-	"go.dedis.ch/kyber/v3"
-	"go.dedis.ch/kyber/v3/group/internal/marshalling"
-	"go.dedis.ch/kyber/v3/group/mod"
+	"github.com/Secured-Finance/kyber"
+	"github.com/Secured-Finance/kyber/group/internal/marshalling"
+	"github.com/Secured-Finance/kyber/group/mod"
 )
 
 type basicPoint struct {

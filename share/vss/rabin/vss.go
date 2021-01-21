@@ -36,9 +36,9 @@ import (
 	"fmt"
 	"reflect"
 
-	"go.dedis.ch/kyber/v3"
-	"go.dedis.ch/kyber/v3/share"
-	"go.dedis.ch/kyber/v3/sign/schnorr"
+	"github.com/Secured-Finance/kyber"
+	"github.com/Secured-Finance/kyber/share"
+	"github.com/Secured-Finance/kyber/sign/schnorr"
 	"go.dedis.ch/protobuf"
 )
 

@@ -14,11 +14,11 @@ import (
 	"errors"
 	"math/big"
 
-	"go.dedis.ch/kyber/v3"
-	"go.dedis.ch/kyber/v3/group/mod"
-	"go.dedis.ch/kyber/v3/pairing"
-	"go.dedis.ch/kyber/v3/sign"
-	"go.dedis.ch/kyber/v3/sign/bls"
+	"github.com/Secured-Finance/kyber"
+	"github.com/Secured-Finance/kyber/group/mod"
+	"github.com/Secured-Finance/kyber/pairing"
+	"github.com/Secured-Finance/kyber/sign"
+	"github.com/Secured-Finance/kyber/sign/bls"
 	"golang.org/x/crypto/blake2s"
 )
 

@@ -41,12 +41,12 @@ import (
 	"errors"
 	"fmt"
 
-	"go.dedis.ch/kyber/v3"
-	"go.dedis.ch/kyber/v3/sign/schnorr"
+	"github.com/Secured-Finance/kyber"
+	"github.com/Secured-Finance/kyber/sign/schnorr"
 	"go.dedis.ch/protobuf"
 
-	"go.dedis.ch/kyber/v3/share"
-	vss "go.dedis.ch/kyber/v3/share/vss/rabin"
+	"github.com/Secured-Finance/kyber/share"
+	vss "github.com/Secured-Finance/kyber/share/vss/rabin"
 )
 
 // Suite wraps the functionalities needed by the dkg package

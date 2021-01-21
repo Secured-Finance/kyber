@@ -6,10 +6,10 @@ import (
 	"testing"
 	"testing/quick"
 
+	"github.com/Secured-Finance/kyber/group/edwards25519"
+	"github.com/Secured-Finance/kyber/sign/eddsa"
+	"github.com/Secured-Finance/kyber/util/key"
 	"github.com/stretchr/testify/assert"
-	"go.dedis.ch/kyber/v3/group/edwards25519"
-	"go.dedis.ch/kyber/v3/sign/eddsa"
-	"go.dedis.ch/kyber/v3/util/key"
 )
 
 func TestSchnorrSignature(t *testing.T) {

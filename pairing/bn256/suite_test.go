@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/Secured-Finance/kyber"
+	"github.com/Secured-Finance/kyber/group/mod"
+	"github.com/Secured-Finance/kyber/util/random"
 	"github.com/stretchr/testify/require"
-	"go.dedis.ch/kyber/v3"
-	"go.dedis.ch/kyber/v3/group/mod"
-	"go.dedis.ch/kyber/v3/util/random"
 	"go.dedis.ch/protobuf"
 	"golang.org/x/crypto/bn256"
 )

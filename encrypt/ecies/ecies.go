@@ -9,8 +9,8 @@ import (
 	"errors"
 	"hash"
 
-	"go.dedis.ch/kyber/v3"
-	"go.dedis.ch/kyber/v3/util/random"
+	"github.com/Secured-Finance/kyber"
+	"github.com/Secured-Finance/kyber/util/random"
 	"golang.org/x/crypto/hkdf"
 )
 

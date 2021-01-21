@@ -5,11 +5,11 @@ import (
 	"strconv"
 	"testing"
 
+	"github.com/Secured-Finance/kyber"
+	"github.com/Secured-Finance/kyber/group/edwards25519"
+	"github.com/Secured-Finance/kyber/share"
+	dkg "github.com/Secured-Finance/kyber/share/dkg/pedersen"
 	"github.com/stretchr/testify/require"
-	"go.dedis.ch/kyber/v3"
-	"go.dedis.ch/kyber/v3/group/edwards25519"
-	"go.dedis.ch/kyber/v3/share"
-	dkg "go.dedis.ch/kyber/v3/share/dkg/pedersen"
 )
 
 var suite = edwards25519.NewBlakeSHA256Ed25519()
